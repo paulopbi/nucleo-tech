@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "O que é linguagem de programação? Conheça as principais",
+      "description": "Uma das mais populares vertentes da tecnologia da informação, a área de programação segue tendo muita demanda de trabalho justamente pela velocidade com que dispositivos tecnológicos vêm avançando."
+    },
+    {
+      "id": 2,
+      "title": "Red Dead Redemption II já vendeu 46 milhões de cópias ",
+      "description": "A franquia Red Dead como um todo já vendeu 70 milhões de cópias. Isso torna Red Dead Redemption II o segundo jogo mais vendido dos Estados Unidos nos últimos 5 anos, atrás apenas de Grand Theft Auto V, que também é de propriedade da Rockstar."
+    },
+    {
+      "id": 3,
+      "title": "Por que os hiperlinks são azuis em sua maioria?",
+      "description": "Quem navega na internet, certamente já percebeu que ela conta com diversos recursos para tornar a nossa vida mais fácil. Entre essas opções podemos mencionar os hiperlinks – uma palavra ou termo clicável que direciona o leitor."
+    }
+  ]
+}
