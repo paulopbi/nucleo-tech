@@ -1,0 +1,55 @@
+$brand-color: #e07b67;
+$background: #121214;
+$foreground: #17171a;
+$white: #fff;
+$dark-30: #202024;
+$dark-40: #252529;
+$dark-50: #afabb6;
+
+$font-title: 'Space Grotesk', sans-serif;
+$font-description: 'Inter', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: $white;
+  background-color: $background;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.title {
+  font-family: $font-title;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: $white;
+}
+
+.description {
+  font-family: $font-description;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: $dark-50;
+}
