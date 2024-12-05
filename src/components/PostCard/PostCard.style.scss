@@ -1,0 +1,30 @@
+@import '../../GlobalStyles.scss';
+
+.article {
+  margin-block: 2.625rem;
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 2px solid $dark-40;
+  background-color: $foreground;
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid $brand-color;
+  }
+
+  &-date-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .like-icon {
+    cursor: pointer;
+  }
+
+  &-title {
+    margin-bottom: 1rem;
+  }
+}
