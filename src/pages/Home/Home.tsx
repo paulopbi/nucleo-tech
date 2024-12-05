@@ -1,7 +1,7 @@
-import './Home.styles.scss'
+import Header from '../../components/Header/Header'
 
 function Home() {
-  return <h1 className="teste">Teste</h1>
+  return <Header />
 }
 
 export default Home
