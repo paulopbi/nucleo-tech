@@ -1,12 +1,14 @@
 interface IPosts {
   id: number
+  image: string
   liked: boolean
   title: string
+  post: string
   description: string
 }
 
 export interface PostsContextType {
-  data: Post[] | null
-  loading: boolean
+  data: IPosts | null
+  loading: boolean | null
   error: string | null
 }
