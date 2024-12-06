@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react'
-import { IPosts } from '../interfaces/interfaces'
 
-function useFetchPosts(url: string) {
-  const [data, setData] = useState<null | IPosts[]>(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
+function useFetchPosts<T>(url: string) {
+  const [data, setData] = useState<null | T>(null)
+  const [loading, setLoading] = useState<null | boolean>(true)
+  const [error, setError] = useState<string>('')
 
   useEffect(() => {
     async function getData(): Promise<void> {
       try {
-        setLoading(true)
         const response = await fetch(url)
 
         if (!response.ok) {
@@ -17,21 +15,21 @@ function useFetchPosts(url: string) {
         }
 
         const data = await response.json()
-        console.log(data)
-
         setData(data)
+        setLoading(false)
       } catch (error) {
         if (error instanceof Error) {
           setError(error.message)
           setData(null)
         }
       } finally {
-        setLoading(false)
         setError('')
+        setLoading(false)
       }
     }
     getData()
   }, [url])
+
   return { data, loading, error }
 }
 
