@@ -1,9 +1,10 @@
 import { IPosts } from '../../interfaces/interfaces'
-import { Heart } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import './PostsCard.style.scss'
 import Loading from '../Loading/Loading'
 import useFetchPosts from '../../hooks/useFetchPosts'
+import stringToDate from '../../helpers/StringToDate'
 
 function PostsCard() {
   const { data, loading, error } = useFetchPosts<IPosts[]>(
@@ -20,14 +21,13 @@ function PostsCard() {
             <article className="article">
               <Link to={`/post/${post.id}`}>
                 <div className="article-date-container">
-                  <time className="date">17 de ago, 2024</time>
-                  <div className="like-icon">
-                    <Heart
-                      size={28}
-                      color="#E07B67"
-                      fill={`${post.liked ? '#E07B67' : 'transparent'}`}
-                    />
-                  </div>
+                  <time className="date">{stringToDate(post.date)}</time>
+
+                  <ArrowUpRight
+                    size={30}
+                    color="#fff"
+                    className="article-arrow-icon"
+                  />
                 </div>
                 <div>
                   <h2 className="title article-title">{post.title}</h2>
