@@ -3,16 +3,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './GlobalStyles.scss'
 import Home from './pages/Home/Home.tsx'
-import { GetPostsProvider } from './context/PostsContext.tsx'
+import Post from './pages/Post/Post.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <GetPostsProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </GetPostsProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="post/:id" element={<Post />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )

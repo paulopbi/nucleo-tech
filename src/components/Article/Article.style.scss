@@ -1,0 +1,66 @@
+@import '../../GlobalStyles.scss';
+
+.post {
+  width: 100%;
+  min-height: 100vh;
+
+  .post-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .go-back {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 0;
+    margin-block: 1.5rem;
+    text-transform: uppercase;
+    color: $white;
+    border: none;
+    background-color: transparent;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  &-article {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+  }
+
+  &-title {
+    max-width: 60ch;
+    font-family: $font-title;
+    font-size: 2.5rem;
+    color: $brand-color;
+  }
+
+  &-description {
+    font-family: $font-description;
+    font-size: 1.2rem;
+    color: $dark-50;
+    line-height: 1.6;
+    text-align: left;
+    white-space: pre-line;
+    max-width: 90ch;
+  }
+}
