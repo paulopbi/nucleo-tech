@@ -1,0 +1,43 @@
+@import '../../GlobalStyles.scss';
+
+.loading-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  gap: 8px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  background-color: $background;
+
+  h4 {
+    font-family: $font-description;
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: 0.8;
+    color: $white;
+  }
+}
+
+.loading {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: $brand-color;
+  animation: loading 1.5s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
