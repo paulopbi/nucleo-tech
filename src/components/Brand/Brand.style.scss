@@ -1,0 +1,13 @@
+@import '../../GlobalStyles.scss';
+
+.brand {
+  &-logo {
+    font-size: 2.5rem;
+    font-family: $font-title;
+    font-weight: 500;
+  }
+
+  &-detail {
+    color: $brand-color;
+  }
+}
