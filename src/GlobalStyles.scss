@@ -13,6 +13,9 @@ $font-description: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
 }
 
 body {
@@ -27,11 +30,17 @@ a {
 }
 
 button {
+  min-width: 80px;
   cursor: pointer;
 }
 
 li {
   list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -45,6 +54,15 @@ li {
   font-weight: 500;
   font-size: 1.5rem;
   color: $white;
+}
+
+.subtitle {
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: $white;
+  opacity: 0.92;
+  text-transform: capitalize;
 }
 
 .description {
