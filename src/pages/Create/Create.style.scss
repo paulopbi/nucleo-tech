@@ -1,0 +1,91 @@
+@import '../../GlobalStyles.scss';
+
+.create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin-inline: auto;
+
+  &-heading {
+    width: 70%;
+
+    h1 {
+      opacity: 0.92;
+    }
+
+    p {
+      max-width: 90ch;
+      margin-top: 0.5rem;
+      color: $dark-50;
+    }
+  }
+
+  form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    label {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      font-family: $font-description;
+      font-size: 1rem;
+      min-width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      outline: none;
+      border: 2px solid $dark-40;
+      background-color: $dark-30;
+      color: $white;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 1.125rem;
+      color: $dark-50;
+      font-family: $font-description;
+    }
+
+    input:focus,
+    textarea:focus,
+    input:focus,
+    textarea:active {
+      -webkit-box-shadow: 0px 0px 11px 2px $brand-color;
+      -moz-box-shadow: 0px 0px 11px 2px $brand-color;
+      box-shadow: 0px 0px 11px 2px $brand-color;
+    }
+  }
+
+  #article-post,
+  #description-post {
+    resize: vertical;
+  }
+
+  #send-post {
+    width: 300px;
+    font-family: $font-description;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    border: none;
+    color: $background;
+    background-color: $brand-color;
+  }
+}
