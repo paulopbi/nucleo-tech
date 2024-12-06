@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './GlobalStyles.scss'
@@ -11,6 +11,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="post/:id" element={<Post />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
