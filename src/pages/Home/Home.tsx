@@ -1,11 +1,11 @@
 import Header from '../../components/Header/Header'
-import PostCard from '../../components/PostCard/PostCard'
+import PostsCard from '../../components/PostsCard/PostsCard'
 
 function Home() {
   return (
     <>
       <Header />
-      <PostCard />
+      <PostsCard />
     </>
   )
 }
