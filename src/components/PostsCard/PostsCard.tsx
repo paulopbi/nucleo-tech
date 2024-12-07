@@ -1,22 +1,40 @@
-import { IPosts } from '../../interfaces/interfaces'
+import { IPostCard, IPosts } from '../../interfaces/interfaces'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import './PostsCard.style.scss'
 import Loading from '../Loading/Loading'
 import useFetchPosts from '../../hooks/useFetchPosts'
+import { useEffect, useState } from 'react'
+import Error from '../Error/Error'
 
-function PostsCard() {
+function PostsCard({ input }: IPostCard) {
   const { data, loading, error } = useFetchPosts<IPosts[]>(
     'http://localhost:3000/posts',
   )
+  const [filteredData, setFilteredData] = useState<null | IPosts[]>(null)
+
+  useEffect(() => {
+    if (data) {
+      setFilteredData(
+        input
+          ? data.filter((post: IPosts) =>
+              post.title.toLowerCase().includes(input.toLocaleLowerCase()),
+            )
+          : data,
+      )
+    }
+  }, [data, input])
 
   return (
     <>
-      {error && <p>{error}</p>}
       {loading && <Loading />}
-      {data &&
-        data.map((post: IPosts) => (
-          <section className="container" key={post.id}>
+      {error && <Error error={error} />}
+      {filteredData?.length === 0 && (
+        <Error error={'Nenhum post com esse titulo foi encontrado'} />
+      )}
+      {filteredData &&
+        filteredData.map((post: IPosts) => (
+          <section className="container article-container" key={post.id}>
             <article className="article">
               <Link to={`/post/${post.id}`}>
                 <div className="article-date-container">

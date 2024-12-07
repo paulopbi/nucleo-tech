@@ -1,7 +1,11 @@
 @import '../../GlobalStyles.scss';
 
+article-container {
+  min-height: 100vh;
+}
+
 .article {
-  margin-block: 2.625rem;
+  margin-block: 1.8rem;
   padding: 2.5rem;
   border-radius: 8px;
   border: 2px solid $dark-40;
