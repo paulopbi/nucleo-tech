@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import './PostsCard.style.scss'
 import Loading from '../Loading/Loading'
 import useFetchPosts from '../../hooks/useFetchPosts'
-import stringToDate from '../../helpers/StringToDate'
 
 function PostsCard() {
   const { data, loading, error } = useFetchPosts<IPosts[]>(
@@ -21,7 +20,7 @@ function PostsCard() {
             <article className="article">
               <Link to={`/post/${post.id}`}>
                 <div className="article-date-container">
-                  <time className="date">{stringToDate(post.date)}</time>
+                  <time className="date">{post.date}</time>
 
                   <ArrowUpRight
                     size={30}
