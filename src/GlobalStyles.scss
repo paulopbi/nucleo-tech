@@ -30,8 +30,35 @@ a {
 }
 
 button {
+  display: block;
   min-width: 80px;
+  font-family: $font-description;
   cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: $font-description;
+  font-size: 1rem auto;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid $dark-40;
+  background-color: $dark-30;
+  color: $white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.125rem;
+  color: $dark-50;
+  font-family: $font-description;
+}
+
+input:focus,
+textarea:focus,
+input:focus,
+textarea:active {
+  box-shadow: $brand-color 0px 0px 0px 3px;
 }
 
 li {
@@ -52,6 +79,22 @@ img {
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1rem;
+}
+
+.button {
+  font-family: $font-description;
+  transition: background 0.3s linear;
+  color: $background;
+  background-color: $brand-color;
+
+  &:hover {
+    color: $background;
+    background-color: $white;
+  }
+
+  svg {
+    color: $background;
+  }
 }
 
 .title {

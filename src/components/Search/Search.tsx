@@ -11,7 +11,7 @@ function Search() {
         id="search-input"
         placeholder="Pesquisar no blog"
       />
-      <Link to="/create" className="input-button">
+      <Link to="/create" className="button input-button">
         Criar Um Post
         <Newspaper size={16} />
       </Link>
