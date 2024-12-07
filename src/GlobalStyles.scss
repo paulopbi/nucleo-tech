@@ -43,6 +43,11 @@ img {
   max-width: 100%;
 }
 
+:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .container {
   max-width: 1200px;
   margin-inline: auto;
