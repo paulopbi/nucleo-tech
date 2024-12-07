@@ -11,19 +11,19 @@ function useFetchPosts<T>(url: string) {
         const response = await fetch(url)
 
         if (!response.ok) {
-          throw new Error('Ocorreu um erro ao buscar os posts')
+          throw new Error(
+            'Ocorreu um erro ao buscar os dados, tente novamente!',
+          )
         }
 
         const data = await response.json()
         setData(data)
-        setLoading(false)
       } catch (error) {
         if (error instanceof Error) {
           setError(error.message)
           setData(null)
         }
       } finally {
-        setError('')
         setLoading(false)
       }
     }
