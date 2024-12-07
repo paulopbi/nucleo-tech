@@ -3,6 +3,7 @@ import './Footer.style.scss'
 
 function Footer() {
   const yearNow = new Date().getFullYear()
+
   return (
     <footer className="footer">
       <div className="footer-content container">
