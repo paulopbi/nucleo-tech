@@ -1,4 +1,5 @@
-@import '../../GlobalStyles.scss';
+@use '../../styles/colors' as colors;
+@use '../../styles/fonts' as fonts;
 
 .footer {
   display: flex;
@@ -7,7 +8,7 @@
   width: 100%;
   height: 100px;
   margin-top: 1rem;
-  background-color: $foreground;
+  background-color: colors.$foreground;
 
   &-content {
     width: 100%;
@@ -34,11 +35,11 @@
 
   svg {
     transition: 0.4s linear;
-    color: $brand-color;
+    color: colors.$brand-color;
   }
 
   svg:hover {
     transform: translateY(-5px);
-    color: $white;
+    color: colors.$white;
   }
 }

@@ -1,13 +1,14 @@
-@import '../../GlobalStyles.scss';
+@use '../../styles/colors' as colors;
+@use '../../styles/fonts' as fonts;
 
 .brand {
   &-logo {
     font-size: 2.5rem;
-    font-family: $font-title;
+    font-family: fonts.$font-secondary;
     font-weight: 500;
   }
 
   &-detail {
-    color: $brand-color;
+    color: colors.$brand-color;
   }
 }

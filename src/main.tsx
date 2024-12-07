@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './GlobalStyles.scss'
+import './styles/global.scss'
 import Home from './pages/Home/Home.tsx'
 import Post from './pages/Post/Post.tsx'
 import Create from './pages/Create/Create.tsx'

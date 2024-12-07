@@ -1,3 +1,6 @@
+@use '../../styles/colors' as colors;
+@use '../../styles/fonts' as fonts;
+
 .error {
   display: flex;
   align-items: center;
@@ -11,13 +14,13 @@
 
   h5 {
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: fonts.$font-primary;
     word-break: break-all;
     padding: 0.75rem 1.25rem;
     border-radius: 4px;
     text-align: center;
-    border: 2px solid #ffeeba;
-    color: #856404;
-    background-color: #fff3cd;
+    border: 2px solid colors.$warning-border;
+    color: colors.$warning-text;
+    background-color: colors.$warning-background;
   }
 }

@@ -1,13 +1,5 @@
-$brand-color: #e07b67;
-$background: #121214;
-$foreground: #17171a;
-$white: #fff;
-$dark-30: #202024;
-$dark-40: #252529;
-$dark-50: #afabb6;
-
-$font-title: 'Space Grotesk', sans-serif;
-$font-description: 'Inter', sans-serif;
+@use './colors' as colors;
+@use './fonts' as fonts;
 
 * {
   margin: 0;
@@ -15,16 +7,16 @@ $font-description: 'Inter', sans-serif;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smooth: always;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: $white;
-  background-color: $background;
+  font-family: fonts.$font-primary;
+  color: colors.$white;
+  background-color: colors.$background;
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
@@ -32,33 +24,33 @@ a {
 button {
   display: block;
   min-width: 80px;
-  font-family: $font-description;
+  font-family: fonts.$font-primary;
   cursor: pointer;
 }
 
 input,
 textarea {
-  font-family: $font-description;
+  font-family: fonts.$font-primary;
   font-size: 1rem auto;
   border-radius: 8px;
   outline: none;
-  border: 2px solid $dark-40;
-  background-color: $dark-30;
-  color: $white;
+  border: 2px solid colors.$dark-40;
+  background-color: colors.$dark-30;
+  color: colors.$white;
 }
 
 input::placeholder,
 textarea::placeholder {
   font-size: 1.125rem;
-  color: $dark-50;
-  font-family: $font-description;
+  color: colors.$dark-50;
+  font-family: fonts.$font-primary;
 }
 
 input:focus,
 textarea:focus,
 input:focus,
 textarea:active {
-  box-shadow: $brand-color 0px 0px 0px 3px;
+  box-shadow: colors.$brand-color 0px 0px 0px 3px;
 }
 
 li {
@@ -73,6 +65,7 @@ img {
 :disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .container {
@@ -82,48 +75,48 @@ img {
 }
 
 .button {
-  font-family: $font-description;
-  transition: background 0.3s linear;
-  color: $background;
-  background-color: $brand-color;
+  font-family: fonts.$font-primary;
+  transition: all 0.4s;
+  color: colors.$background;
+  background-color: colors.$brand-color;
 
   &:hover {
-    color: $background;
-    background-color: $white;
+    color: colors.$background;
+    background-color: colors.$white;
   }
 
   svg {
-    color: $background;
+    color: colors.$background;
   }
 }
 
 .title {
-  font-family: $font-title;
+  font-family: fonts.$font-secondary;
   font-weight: 500;
   font-size: 1.5rem;
-  color: $white;
+  color: colors.$white;
 }
 
 .subtitle {
-  font-family: $font-title;
+  font-family: fonts.$font-secondary;
   font-weight: 400;
   font-size: 1.25rem;
-  color: $white;
+  color: colors.$white;
   opacity: 0.92;
   text-transform: capitalize;
 }
 
 .description {
-  font-family: $font-description;
+  font-family: fonts.$font-primary;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.5;
-  color: $dark-50;
+  color: colors.$dark-50;
 }
 
 .date {
-  font-family: $font-description;
+  font-family: fonts.$font-primary;
   font-size: 1rem;
   font-weight: 500;
-  color: $brand-color;
+  color: colors.$brand-color;
 }

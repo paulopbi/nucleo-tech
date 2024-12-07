@@ -1,9 +1,10 @@
-@import '../../GlobalStyles.scss';
+@use '../../styles/colors' as colors;
+@use '../../styles/fonts' as fonts;
 
 .header {
   width: 100%;
   padding-block: 1.5rem;
-  background-color: $foreground;
+  background-color: colors.$foreground;
 
   &-content {
     display: flex;

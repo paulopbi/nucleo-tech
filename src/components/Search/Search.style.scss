@@ -1,4 +1,5 @@
-@import '../../GlobalStyles.scss';
+@use '../../styles/colors' as colors;
+@use '../../styles/fonts' as fonts;
 
 .input-container {
   width: 100%;
@@ -30,6 +31,6 @@
   text-transform: uppercase;
 
   svg {
-    color: $background;
+    color: colors.$background;
   }
 }
