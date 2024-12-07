@@ -1,0 +1,65 @@
+@import '../../GlobalStyles.scss';
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin-inline: auto;
+
+  &-heading {
+    width: 70%;
+
+    h1 {
+      opacity: 0.92;
+    }
+
+    p {
+      max-width: 90ch;
+      margin-top: 0.5rem;
+      color: $dark-50;
+    }
+  }
+
+  form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    label {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      min-width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  #article,
+  #description {
+    resize: vertical;
+  }
+
+  #send-post {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    border: none;
+  }
+}
