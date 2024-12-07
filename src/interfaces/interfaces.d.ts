@@ -8,10 +8,10 @@ interface IPosts {
   description: string
 }
 
-export interface ISearch {
+interface ISearch {
   setInput: React.Dispatch<React.SetStateAction<string>>
 }
 
-export interface IPostCard {
+interface IPostCard {
   input: string
 }
