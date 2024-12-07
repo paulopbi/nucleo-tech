@@ -8,8 +8,10 @@ interface IPosts {
   description: string
 }
 
-export interface PostsContextType {
-  data: IPosts | null
-  loading: boolean | null
-  error: string | null
+export interface ISearch {
+  setInput: React.Dispatch<React.SetStateAction<string>>
+}
+
+export interface IPostCard {
+  input: string
 }
