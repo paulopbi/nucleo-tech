@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 100vh;
 
-  .post-image {
+  &-image {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -49,19 +49,21 @@
   }
 
   &-title {
-    max-width: 60ch;
+    max-width: 1000px;
     font-family: fonts.$font-secondary;
     font-size: 2.5rem;
     color: colors.$brand-color;
   }
 
   &-description {
+    width: 100%;
     font-family: fonts.$font-primary;
     font-size: 1.2rem;
-    color: colors.$dark-50;
     line-height: 1.6;
+    text-wrap: pretty;
     text-align: left;
-    white-space: pre-line;
-    max-width: 90ch;
+    word-break: break-all;
+
+    color: colors.$dark-50;
   }
 }
