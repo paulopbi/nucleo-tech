@@ -4,6 +4,7 @@ import './Article.style.scss'
 import useFetchPosts from '../../hooks/useFetchPosts'
 import Loading from '../Loading/Loading.tsx'
 import Error from '../Error/Error.tsx'
+import Meta from '../Meta/Meta.tsx'
 
 function Article({ id }: { id: string }) {
   const { data, loading, error } = useFetchPosts<IPosts>(
@@ -12,6 +13,14 @@ function Article({ id }: { id: string }) {
 
   return (
     <>
+      {data ? (
+        <Meta
+          title={`${data?.title}`}
+          description="Artigo do blog NúcleoTech"
+        />
+      ) : (
+        <Meta title="Artigo" description="Artigo do blog NúcleoTech" />
+      )}
       {loading && <Loading />}
       {error && <Error error={error} />}
       {data && (
@@ -32,8 +41,8 @@ function Article({ id }: { id: string }) {
               <p className="post-description">{data.description}</p>
 
               <h2 className="subtitle">Notícia</h2>
-              {data.post.split('<br>').map((space) => (
-                <p className="post-description">{space}</p>
+              {data.post.split('<br>').map((textWithSpace) => (
+                <p className="post-description">{textWithSpace}</p>
               ))}
             </article>
           </div>

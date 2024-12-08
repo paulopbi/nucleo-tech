@@ -16,3 +16,8 @@ interface ISearch {
 interface IPostCard {
   input: string
 }
+
+interface IMetaTag {
+  title: string
+  description: string
+}
