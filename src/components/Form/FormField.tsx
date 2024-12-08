@@ -29,19 +29,23 @@ function FormField() {
   return (
     <section className="form-field">
       <div className="form-field-heading">
-        <h1>Criar Artigo</h1>
+        <h1>Criar Matéria</h1>
         <p>
           Nessa sessão você poderá criar um post para o blog, basta preencher os
           campos abaixo, seu post ficará disponivél por 4 minutos e depois será
-          apagado!
+          excluido!
         </p>
       </div>
       <form onSubmit={handleSubmit}>
         <div className="form-field-title">
-          <label htmlFor="title">Titulo</label>
+          <label htmlFor="title">
+            Titulo <span>máximo de 100 caracteres.</span>
+          </label>
           <input
             type="text"
             id="title"
+            minLength={5}
+            maxLength={100}
             placeholder="Escreva o titulo da matéria"
             onChange={({ target }) => setTitle(target.value)}
             required
@@ -49,21 +53,26 @@ function FormField() {
         </div>
 
         <div>
-          <label htmlFor="image">Link da Imagem</label>
+          <label htmlFor="image">
+            Link da Imagem <span>Caso não tenha a URL, deixe em branco</span>
+          </label>
           <input
             type="url"
             id="image"
             placeholder="Digite o link (URL) da imagem aqui"
             onChange={({ target }) => setImage(target.value)}
-            required
           />
         </div>
 
         <div className="form-field-description">
-          <label htmlFor="description">Descrição</label>
+          <label htmlFor="description">
+            Descrição <span>máximo de 500 caracteres</span>{' '}
+          </label>
           <textarea
             name="description"
             id="description"
+            minLength={5}
+            maxLength={500}
             rows={3}
             placeholder="Escreva a descrição da matéria"
             onChange={({ target }) => setDescription(target.value)}
@@ -72,11 +81,17 @@ function FormField() {
         </div>
 
         <div>
-          <label htmlFor="article">Matéria</label>
+          <label htmlFor="article">
+            Matéria do Artigo
+            <span>
+              para pular linha, digite <code>&lt;br&gt;</code>
+            </span>
+          </label>
           <textarea
             name="post"
             id="article"
             placeholder="Escreva conteúdo da matéria"
+            minLength={5}
             rows={5}
             onChange={({ target }) => setPost(target.value)}
             required
