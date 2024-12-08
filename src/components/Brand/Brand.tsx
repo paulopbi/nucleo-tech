@@ -5,7 +5,7 @@ function Brand() {
     <section className="brand container">
       <div>
         <h1 className="brand-logo">
-          The <span className="brand-detail">Revista</span>
+          Núcleo<span className="brand-detail">Tech</span>
         </h1>
       </div>
     </section>
