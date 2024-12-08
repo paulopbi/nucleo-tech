@@ -12,6 +12,7 @@ export default async function createPost(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        remove: true,
         title,
         description,
         post,
