@@ -1,5 +1,6 @@
 interface IPosts {
   id: number
+  remove: boolean
   image: string
   liked: boolean
   date: string
