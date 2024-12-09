@@ -1,11 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from '../../components/Header/Header'
 import PostsCard from '../../components/PostsCard/PostsCard'
 import Search from '../../components/Search/Search'
 import Meta from '../../components/Meta/Meta'
+import deletePost from '../../helpers/deletePost'
 
 function Home() {
   const [input, setInput] = useState<string>('')
+
+  useEffect(() => {
+    setTimeout(() => {
+      deletePost()
+      console.log('o tempo passou')
+    }, 180000)
+  }, [])
 
   return (
     <>

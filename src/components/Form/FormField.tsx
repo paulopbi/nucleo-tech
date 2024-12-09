@@ -38,7 +38,7 @@ function FormField() {
           <h1>Criar Um Post</h1>
           <p>
             Nessa sessão você poderá criar um post para o blog, basta preencher
-            os campos abaixo, seu post ficará disponivél por 4 minutos e depois
+            os campos abaixo, seu post ficará disponivél por 3 minutos e depois
             será excluido!
           </p>
         </div>

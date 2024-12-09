@@ -12,7 +12,7 @@ function useFetchPosts<T>(url: string) {
 
         if (!response.ok) {
           throw new Error(
-            'Ocorreu um erro ao buscar os dados, tente novamente!',
+            'Não foi possível encontrar esse post, ele foi excluido!',
           )
         }
 

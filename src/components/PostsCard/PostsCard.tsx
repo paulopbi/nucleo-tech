@@ -15,20 +15,6 @@ function PostsCard({ input }: IPostCard) {
 
   useEffect(() => {
     if (data) {
-      const moreThanFourPosts = data.length > 3
-
-      if (moreThanFourPosts) {
-        const deleteAllowedPost = data.filter(({ remove }) => remove === true)
-
-        setTimeout(() => {
-          deletePost(deleteAllowedPost)
-        }, 240000)
-      }
-    }
-  }, [data])
-
-  useEffect(() => {
-    if (data) {
       setFilteredData(
         input
           ? data.filter((post: IPosts) =>
