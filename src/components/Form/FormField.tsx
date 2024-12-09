@@ -5,6 +5,7 @@ import './FormField.style.scss'
 import createPost from '../../helpers/createPost'
 import Loading from '../Loading/Loading'
 import Meta from '../Meta/Meta'
+import Error from '../Error/Error'
 
 function FormField() {
   const navigate = useNavigate()
@@ -24,6 +25,8 @@ function FormField() {
       setDisabled(false)
       navigate('/')
       return <Loading />
+    } else {
+      return <Error error="Algo deu errado ao enviar os dados" />
     }
   }
 

@@ -11,43 +11,43 @@ function Article({ id }: { id: string }) {
     `http://localhost:3000/posts/${id}`,
   )
 
+  if (!data) {
+    return (
+      <>
+        {error && <Error error={error} />}
+        <Meta title="Artigo excluído" description="Artigo do blog NúcleoTech" />
+      </>
+    )
+  }
+
   return (
     <>
-      {data ? (
-        <Meta
-          title={`${data?.title}`}
-          description="Artigo do blog NúcleoTech"
-        />
-      ) : (
-        <Meta title="Artigo" description="Artigo do blog NúcleoTech" />
-      )}
       {loading && <Loading />}
-      {error && <Error error={error} />}
-      {data && (
-        <section className="post">
-          {data.image ? (
-            <div className="post-image">
-              <img src={data.image} alt={data.title} height={500} />
-            </div>
-          ) : null}
-          <div className="container">
-            <Link to="/" className="go-back">
-              <ArrowLeft /> Voltar
-            </Link>
-            <article className="post-article">
-              <h2 className="post-title">{data.title}</h2>
+      <Meta title={`${data.title}`} description="Artigo do blog NúcleoTech" />
 
-              <h2 className="subtitle">Descrição</h2>
-              <p className="post-description">{data.description}</p>
-
-              <h2 className="subtitle">Notícia</h2>
-              {data.post.split('<br>').map((textWithSpace) => (
-                <p className="post-description">{textWithSpace}</p>
-              ))}
-            </article>
+      <section className="post">
+        {data.image ? (
+          <div className="post-image">
+            <img src={data.image} alt={data.title} height={500} />
           </div>
-        </section>
-      )}
+        ) : null}
+        <div className="container">
+          <Link to="/" className="go-back">
+            <ArrowLeft /> Voltar
+          </Link>
+          <article className="post-article">
+            <h2 className="post-title">{data.title}</h2>
+
+            <h2 className="subtitle">Descrição</h2>
+            <p className="post-description">{data.description}</p>
+
+            <h2 className="subtitle">Notícia</h2>
+            {data.post.split('<br>').map((textWithSpace) => (
+              <p className="post-description">{textWithSpace}</p>
+            ))}
+          </article>
+        </div>
+      </section>
     </>
   )
 }
