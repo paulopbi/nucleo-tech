@@ -9,10 +9,11 @@ function Home() {
   const [input, setInput] = useState<string>('')
 
   useEffect(() => {
-    setTimeout(() => {
+    const deleteTime = setTimeout(() => {
       deletePost()
-      console.log('o tempo passou')
     }, 180000)
+
+    return () => clearTimeout(deleteTime)
   }, [])
 
   return (
