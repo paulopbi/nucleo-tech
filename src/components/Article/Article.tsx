@@ -24,7 +24,10 @@ function Article({ id }: { id: string }) {
   return (
     <>
       {loading && <Loading />}
-      <Meta title={`${data.title}`} description="Artigo do blog NúcleoTech" />
+      <Meta
+        title={`${data.title}`}
+        description={`Artigo do blog NúcleoTech, conteúdo: ${data.title}`}
+      />
 
       <section className="post">
         {data.image ? (
