@@ -16,15 +16,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    opacity: 0.8;
-
-    @media screen and (max-width: 600px) {
-      flex-direction: column;
-      gap: 0.8rem;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+    color: colors.$dark-50;
   }
 
   &-icons {
@@ -41,5 +33,17 @@
   svg:hover {
     transform: translateY(-5px);
     color: colors.$white;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    &-content {
+      flex-direction: column;
+      gap: 0.8rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 }

@@ -93,17 +93,17 @@ img {
 .title {
   font-family: fonts.$font-secondary;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: colors.$white;
 }
 
 .subtitle {
   font-family: fonts.$font-secondary;
   font-weight: 400;
-  font-size: 1.25rem;
-  color: colors.$white;
-  opacity: 0.92;
+  font-size: 1.5rem;
   text-transform: capitalize;
+  opacity: 0.9;
+  color: colors.$white;
 }
 
 .description {
@@ -114,9 +114,28 @@ img {
   color: colors.$dark-50;
 }
 
+.text {
+  font-family: fonts.$font-primary;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: colors.$dark-50;
+}
+
 .date {
   font-family: fonts.$font-primary;
   font-size: 1rem;
   font-weight: 500;
   color: colors.$brand-color;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .subtitle,
+  .description,
+  .text {
+    font-size: 1rem;
+  }
 }

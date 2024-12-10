@@ -55,6 +55,14 @@
     color: colors.$brand-color;
   }
 
+  &-subtitle {
+    font-family: fonts.$font-secondary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: colors.$dark-50;
+    opacity: 0.4;
+  }
+
   &-description {
     width: 100%;
     font-family: fonts.$font-primary;
@@ -63,7 +71,26 @@
     text-wrap: pretty;
     text-align: left;
     word-break: break-all;
-
     color: colors.$dark-50;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .post {
+    &-title {
+      font-size: 2rem;
+    }
+
+    &-subtitle {
+      font-size: 1.2rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+    }
+
+    &-image {
+      border-radius: 0px;
+    }
   }
 }

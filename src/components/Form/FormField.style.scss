@@ -2,46 +2,41 @@
 @use '../../styles/fonts' as fonts;
 
 .form-field {
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   min-height: 100vh;
-  max-width: 1200px;
   margin-inline: auto;
 
-  &-heading {
-    width: 70%;
-
-    h1 {
-      opacity: 0.92;
-    }
+  #form-field-heading {
+    width: 100%;
 
     p {
       max-width: 60ch;
-      margin-top: 0.5rem;
-      line-height: 1.3;
-      color: colors.$dark-50;
     }
   }
 
   form {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 
     label {
-      font-size: 1.1rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: start;
+      gap: 0.4rem;
       margin-bottom: 0.5rem;
 
       span {
+        text-wrap: pretty;
         font-weight: 400;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        text-align: right;
         opacity: 0.4;
       }
     }
