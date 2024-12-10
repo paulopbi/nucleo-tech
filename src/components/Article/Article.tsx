@@ -39,10 +39,10 @@ function Article({ id }: { id: string }) {
           <article className="post-article">
             <h2 className="post-title">{data.title}</h2>
 
-            <h2 className="subtitle">Descrição</h2>
+            <h2 className="post-subtitle">Descrição</h2>
             <p className="post-description">{data.description}</p>
 
-            <h2 className="subtitle">Notícia</h2>
+            <h2 className="post-subtitle">Notícia</h2>
             {data.post.split('<br>').map((textWithSpace) => (
               <p className="post-description">{textWithSpace}</p>
             ))}
