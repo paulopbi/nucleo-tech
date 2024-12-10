@@ -8,13 +8,12 @@ import Meta from '../Meta/Meta'
 import Error from '../Error/Error'
 
 function FormField() {
-  const navigate = useNavigate()
-
   const [disabled, setDisabled] = useState(false)
   const [title, setTitle] = useState<string>('')
   const [description, setDescription] = useState<string>('')
   const [post, setPost] = useState<string>('')
   const [image, setImage] = useState<string>('')
+  const navigate = useNavigate()
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
