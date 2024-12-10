@@ -1,15 +1,17 @@
+import { useEffect, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { IPostCard, IPosts } from '../../interfaces/interfaces'
 import './PostsCard.style.scss'
 import Loading from '../Loading/Loading'
 import useFetchPosts from '../../hooks/useFetchPosts'
-import { Suspense, useEffect, useState } from 'react'
 import Error from '../Error/Error'
-import { IPostCard, IPosts } from '../../interfaces/interfaces'
 
 function PostsCard({ input }: IPostCard) {
   const [filteredData, setFilteredData] = useState<null | IPosts[]>(null)
-  const { data } = useFetchPosts<IPosts[]>('http://localhost:3000/posts')
+  const { data, loading, error } = useFetchPosts<IPosts[]>(
+    'http://localhost:3000/posts',
+  )
 
   useEffect(() => {
     if (data) {
@@ -23,7 +25,7 @@ function PostsCard({ input }: IPostCard) {
     }
   }, [data, input])
 
-  if (!data) {
+  if (error) {
     return (
       <>
         <Error error="Não foi possivel carregar os dados" />
@@ -33,28 +35,29 @@ function PostsCard({ input }: IPostCard) {
 
   return (
     <>
+      {loading && <Loading />}
+
       {filteredData?.length === 0 && (
         <Error error="Nenhum post foi encontrado, tente novamente" />
       )}
-      <Suspense fallback={<Loading />}>
-        {filteredData &&
-          filteredData.map((post: IPosts) => (
-            <section className="container" key={post.id}>
-              <div className="posts">
-                <Link to={`/post/${post.id}`} className="posts-link">
-                  <div className="posts-heading">
-                    <time>{post.date}</time>
-                    <ArrowUpRight size={24} />
-                  </div>
-                  <article className="posts-article">
-                    <h2 className="title">{post.title}</h2>
-                    <p className="description">{post.description}</p>
-                  </article>
-                </Link>
-              </div>
-            </section>
-          ))}
-      </Suspense>
+
+      {filteredData &&
+        filteredData.map((post: IPosts) => (
+          <section className="container" key={post.id}>
+            <div className="posts">
+              <Link to={`/post/${post.id}`} className="posts-link">
+                <div className="posts-heading">
+                  <time>{post.date}</time>
+                  <ArrowUpRight size={24} />
+                </div>
+                <article className="posts-article">
+                  <h2 className="title">{post.title}</h2>
+                  <p className="description">{post.description}</p>
+                </article>
+              </Link>
+            </div>
+          </section>
+        ))}
     </>
   )
 }
