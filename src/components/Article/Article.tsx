@@ -5,6 +5,7 @@ import useFetchPosts from '../../hooks/useFetchPosts'
 import Loading from '../Loading/Loading.tsx'
 import Error from '../Error/Error.tsx'
 import Meta from '../Meta/Meta.tsx'
+import { IPosts } from '../../interfaces/interfaces'
 
 function Article({ id }: { id: string }) {
   const { data, loading, error } = useFetchPosts<IPosts>(

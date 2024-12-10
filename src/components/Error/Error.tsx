@@ -1,6 +1,7 @@
+import { IError } from '../../interfaces/interfaces'
 import './Error.style.scss'
 
-function Error({ error }: { error: string }) {
+function Error({ error }: IError) {
   return (
     <div className="error">
       <h5>{error}</h5>

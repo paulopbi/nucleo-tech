@@ -1,4 +1,4 @@
-interface IPosts {
+export interface IPosts {
   id: number
   remove: boolean
   image: string
@@ -9,15 +9,19 @@ interface IPosts {
   description: string
 }
 
-interface ISearch {
+export interface ISearch {
   setInput: React.Dispatch<React.SetStateAction<string>>
 }
 
-interface IPostCard {
+export interface IPostCard {
   input: string
 }
 
-interface IMetaTag {
+export interface IMetaTag {
   title: string
   description: string
+}
+
+export interface IError {
+  error: string
 }

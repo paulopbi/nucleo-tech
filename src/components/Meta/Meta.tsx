@@ -1,3 +1,5 @@
+import { IMetaTag } from '../../interfaces/interfaces'
+
 function Meta({ title, description }: IMetaTag) {
   document
     .querySelector("[name='description']")

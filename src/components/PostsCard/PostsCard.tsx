@@ -5,6 +5,7 @@ import Loading from '../Loading/Loading'
 import useFetchPosts from '../../hooks/useFetchPosts'
 import { Suspense, useEffect, useState } from 'react'
 import Error from '../Error/Error'
+import { IPostCard, IPosts } from '../../interfaces/interfaces'
 
 function PostsCard({ input }: IPostCard) {
   const [filteredData, setFilteredData] = useState<null | IPosts[]>(null)
