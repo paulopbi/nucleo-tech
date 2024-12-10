@@ -1,3 +1,5 @@
+import { IPosts } from '../interfaces/interfaces'
+
 export default async function deletePost() {
   try {
     const response = await fetch('http://localhost:3000/posts')
