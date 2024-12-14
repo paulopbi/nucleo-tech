@@ -36,6 +36,53 @@ This project was built with:
 - **JSON Server** to simulate a backend.
 - **Custom Fetch Hook** for efficient data fetching.
 
+### 🛠️ How To Use
+
+I'm using `pnpm` but you can use `npm` if you want!
+
+Follow these steps to set up and run **NúcleoTech** locally:
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/paulopbi/nucleo-tech.git
+```
+
+#### 2. Enter in the project folder
+
+```bash
+cd nucleo-tech
+```
+
+#### 3. Install Dependencies
+
+Make sure you have Node.js installed. Then run:
+
+```bash
+npm install
+
+#if you use pnpm
+pnpm install
+```
+
+#### 4. Run the Frontend
+
+```bash
+npm run dev
+
+#if you use pnpm
+pnpm run dev
+```
+
+#### 5. Run the Backend
+
+```bash
+npm run serve
+
+#if you use pnpm
+pnpm run serve
+```
+
 ### 📜 License
 
 This project is open-source and free to use. Feel free to contribute or fork the repository, [MIT License](./LICENSE).
