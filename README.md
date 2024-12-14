@@ -18,11 +18,7 @@
 
 Welcome to **NúcleoTech**, a tech and gaming blog like no other! Here, anyone can create and share articles about technology and video games. But there's a twist: each post is **available for only 3 minutes** before it disappears into the digital void.
 
-### 📸 Preview
-
-<video width="1920" height="350" controls autoplay>
-  <source src="src/assets/demo-video.mp4" type="video/mp4">
-</video>
+[Watch The Demo Here](https://youtu.be/mfUxCRbP8YU?si=ZX-myvh4gCnDwRC0)
 
 ### 🚀 Features
 
