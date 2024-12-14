@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+<p align="center">
+  My Social Media
+  <br>
+  <a href="https://www.linkedin.com/in/paulopbi/" target="_blank" rel="noreferrer">
+  Linkedin
+  </a> • 
+  <a href="https://github.com/paulopbi" target="_blank" rel="noreferrer">
+  Github
+  </a> • 
+  <a href="https://www.behance.net/paulopbi" target="_blank" rel="noreferrer">
+  Behance
+  </a>
+  </a> • 
+  <a href="https://github.com/paulopbi/nucleo-tech" target="_blank" rel="noreferrer">
+  Repository
+  </a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **NúcleoTech**, a tech and gaming blog like no other! Here, anyone can create and share articles about technology and video games. But there's a twist: each post is **available for only 3 minutes** before it disappears into the digital void.
 
-Currently, two official plugins are available:
+### 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<video width="1920" height="350" controls autoplay>
+  <source src="src/assets/demo-video.mp4" type="video/mp4">
+</video>
 
-## Expanding the ESLint configuration
+### 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Dynamic Articles**: Create posts with a title, description, content, and an image URL.
+- **Search Bar**: Quickly find articles through the search functionality.
+- **Responsive Design**: Optimized for all screen sizes, ensuring a seamless experience on any device.
 
-- Configure the top-level `parserOptions` property like this:
+### 💻 Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+This project was built with:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **SCSS** for advanced styling.
+- **React** for a dynamic and interactive user interface.
+- **TypeScript** for type safety and scalability.
+- **JSON Server** to simulate a backend.
+- **Custom Fetch Hook** for efficient data fetching.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 📜 License
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project is open-source and free to use. Feel free to contribute or fork the repository, [MIT License](./LICENSE).
